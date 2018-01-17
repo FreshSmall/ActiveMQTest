@@ -26,7 +26,7 @@ public class ConsumerDemoB implements Runnable{
             connection = factory.createConnection();
             connection.start();
 
-            Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);//创建事务的级别
+            session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);//创建事务的级别
 
             //获取消息队列
             Destination destination = session.createTopic("topic");
